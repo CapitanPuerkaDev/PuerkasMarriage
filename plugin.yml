@@ -1,0 +1,12 @@
+name: PuerkasMarriage
+main: es.capitanpuerka.marriage.Main
+version: 1.9-BETA
+author: CapitanPuerka
+depend: [PlaceholderAPI]
+commands:
+  marry:
+    description: Marry with your love
+    aliases: [m]
+  family:
+    description: Family commands
+    aliases: [familia]

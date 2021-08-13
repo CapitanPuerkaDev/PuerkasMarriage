@@ -1,0 +1,207 @@
+#██████╗░██╗░░░██╗███████╗██████╗░██╗░░██╗░█████╗░░██████╗███╗░░░███╗░█████╗░██████╗░██████╗░██╗░█████╗░░██████╗░███████╗
+#██╔══██╗██║░░░██║██╔════╝██╔══██╗██║░██╔╝██╔══██╗██╔════╝████╗░████║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗██╔════╝░██╔════╝
+#██████╔╝██║░░░██║█████╗░░██████╔╝█████═╝░███████║╚█████╗░██╔████╔██║███████║██████╔╝██████╔╝██║███████║██║░░██╗░█████╗░░
+#██╔═══╝░██║░░░██║██╔══╝░░██╔══██╗██╔═██╗░██╔══██║░╚═══██╗██║╚██╔╝██║██╔══██║██╔══██╗██╔══██╗██║██╔══██║██║░░╚██╗██╔══╝░░
+#██║░░░░░╚██████╔╝███████╗██║░░██║██║░╚██╗██║░░██║██████╔╝██║░╚═╝░██║██║░░██║██║░░██║██║░░██║██║██║░░██║╚██████╔╝███████╗
+#╚═╝░░░░░░╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚═╝░╚═════╝░╚══════╝
+FamilyCommand: |-
+  &e&m========&7[ &6&lPuerkas Family &c❤ &7]&e&m========
+  &f
+  &b/family setName <name> &7Set a name to your family
+  &b/family adopt <name> &7Adopt a child
+  &b/family accept <name> &aAccept an adoption petition
+  &b/family kick <name> &7Kick a member of your family
+  &b/family chat &7Toggle family chat mode
+  &f
+  &bFamily Name: {family_name}
+  
+HelpCommand: |-
+  &e&m========&7[ &6&lPuerkas Marriage &c❤ &7]&e&m========
+  &f
+  &b/marry languages &7Show avariable languages
+  &b/marry setLang <language> &7Set your language
+  &7
+  &b/marry gift &7Give the item(s) you currently hold
+  &b/marry gender <male/female> &7Specify your gender
+  &b/marry <player> &7Request a marriage
+  &b/marry pvp <on/off> &7Enable or disable pvping with your partner
+  &b/marry list <page> &7View a list of all married players
+  &b/marry seen &7Check when your partner last logged in
+  &b/marry home &7Teleport to your marriage home
+  &b/marry setHome &7Set a home for you and your partnet
+  &b/marry chat &7Enable or disable marriage chat mode
+  &b/marry heal &7Send your health to you partner
+  &b/marry divorce &7Divorce your current partner
+  &b/marry tp &7Teleport to you partner
+  &b
+  &bStatus: &a{status}
+MarryChat:
+  format: '&c❤ &7[&cMarryChat&7] &7{player}&8: &7{message}'
+#new
+FamilyChat:
+  format: '&c❤ &7[&cFamilyChat&7] &7{player}&8: &7{message}'
+#Inventory
+Inventories:
+  Status:
+    title: '&8{player1} ❤ {player2}'
+    items:
+      player1:
+        title: '&a{player_name}'
+        lore: |-
+          &7{player_name} is married with {partner}
+      player2:
+        title: '&a{player_name}'
+        lore: |-
+          &7{player_name} is married with {partner}
+#Placeholders
+Placeholders:
+  married_status:
+    married: '&c❤'  
+    not_married: '&cNo married'
+  married_text:
+    married: 'Yes'
+    not_married: 'No'
+  gender:
+    male: '&b♂'
+    female: '&d♀'
+  gender_text:
+    male: 'Male'
+    female: 'Female'
+  marriedwith:
+    not_married: '&cNot married'
+  partner_last_logged_in:
+    not_married: '&cNot married'
+    
+Messages:
+  languages:
+    avariable_languages: '&aAvariable Languages: &b'
+    ussage: '&cUssage: /marry setlang <language>'
+    lang_setted: '&aYour lang is now &b{language}&a!'
+  #new
+  family_name:
+    name_lenght: '&cThe name cannot be longer than 17 letters'
+    not_married: '&cIn order to have a family, you first have to get married'
+    setted: '&aThe family name has been changed to &b{name}&a!'
+  family_chat:
+    not_married: '&cTo activate family chat, you must be married'
+    enabledChat: '&aYou have enabled family chat!'
+    disabledChat: '&aYou have disabled family chat!'
+  ender_chest:
+    single: '&cYou are not married to anyone'
+    partner_chest_open: '&aYour partner opened the shared chest!'
+    partner_offline: '&cYou cannot open the shared chest if your partner is not online.'
+  family_status:
+    single: '&cYou are not married'
+    no_name: '&cYour family has no name'
+  status:
+    single: '&csingle'
+    married: '&amarried with {partner}'
+    message: '&a{player} is {variable}'
+    adopted: '&aAdopted by &b{player}'
+  gift:
+    single: '&cYou are not married to anyone'
+    success: '&aYou have recived {item} as gift from your partner'
+    nothing: '&cYou arent holding an item to gift'
+    notOnline: '&cYour partner is not online'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  gender:
+    variable:
+      male: 'MALE'
+      female: 'FEMALE'
+    ussage: '&bUssage: /marry gender <male/famale>'
+    setted: '&aSetted your gender to &b{gender}'
+  pvp:
+    ussage: '&bUssage: /marry pvp <true/false>'
+    enabled: '&aNow you can pvp with your partner'
+    disabled: '&cNow you cant pvp with your partner'
+    single: '&cYou are not married to anyone'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  home:
+    single: '&cYou are not married to anyone'
+    notHave: '&cYou dont have a marry house. You can set using &7/marry setHome'
+    teleported: '&aTeleported to your marry home'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  setHome:
+    single: '&cYou are not married to anyone'
+    homeChanged: '&aYour marry home has been changed!'
+    homeSetted: '&aYour marry home has been setted!'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  chat:
+    single: '&cYou are not married to anyone'
+    enabledChat: '&aYou have enabled marry chat!'
+    disabledChat: '&aYou have disabled marry chat!'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  teleport:
+    single: '&cYou are not married to anyone'
+    notOnline: '&cYour partner is not online.'
+    teleported: '&aTeleported to your partner'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  heal:
+    single: '&cYou are not married to anyone'
+    notOnline: '&cYour partner is not online.'
+    healed: '&aYou have healed your partner'
+    cannot: '&cYou cant heal your partner because your health is less than 2'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  seen:
+    single: '&cYou are not married to anyone'
+    lastLogin: '&aYour partner connected last time - {lastlogin}'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  divorce:
+    single: '&cYou are not married to anyone'
+    divorced: '&aYou have divorced &b{partner}&a!'
+    partnerDivorced: '&b{partner} &ahas divorced you!'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+  acceptBDeny:
+    acceptUssage: '&bUssage: &a/marry accept <player>'
+    nothing: '&cNobody asked you to marry you'
+    playerNotAsk: '&c{player} asked you to marry you'
+    adopted: '&cYou can''t do this because you don''t have a partner. You are adopted.'
+    alredyMarried: |-
+      &cYoure already married to {partner}.
+      &cIf you want, you can divorce him using /marry divorce
+    accepted: '&b{player} agreed to marry you!'
+    married: '&bYou and {player} have married!'
+  #new
+  adopt:
+    variables:
+      accept:
+        title: '&a&lACCEPT'
+        hover: '&aClick to accept!'
+      deny:
+        title: '&c&lDENY'
+        hover: '&aClick to deny!'
+    not_married: '&cIn order to have a family, you first have to get married'
+    no_request: '&cNo one asked to adopt you!'
+    notOnline: '&cThis player is not online'
+    alredyAdopted: '&cYou already have {name} adopted.'
+    playerAdopted: '&cThis player is already addopted.'
+    adoptSended: '&aYou sent a adoption petition to &b{player}&a!'
+    adopt_accept: '&b{player} &aaccepted your adoption request!'
+    adopted_by: '&aYou have been adopted by &b{player}'
+    adopt: |-
+      &b&m===========================================
+      &aThe player &b{player} &awants to adopt you!
+      &7       &aUse /family accept {player} to accept           
+      &b&m===========================================
+  marry:
+    variables:
+      accept:
+        title: '&a&lACCEPT'
+        hover: '&aClick to accept!'
+      deny:
+        title: '&c&lDENY'
+        hover: '&aClick to deny!'
+    notOnline: '&cThis player is not online'
+    alredyMarried: |-
+      &cYoure already married to {partner}.
+      &cIf you want, you can divorce him using /marry divorce
+    playerMarried: '&cThis player is already married.'
+    marrySended: '&aYou sent a marriage petition to &b{player}&a!'
+    marry: |-
+      &b&m===========================================
+      &f
+      &aThe player &b{player} &awants to marry you
+      &7       Use /marry accept {player} to accept
+      &f
+      &b&m===========================================
+      

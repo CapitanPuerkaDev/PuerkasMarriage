@@ -1,0 +1,27 @@
+#Updater
+Updater:
+  checkUpdates: true
+  sendOpMessage: true
+  automaticUpdate: false   
+#Backend Configuration
+Backend:
+  # Set the type you want to database (set 'none' to disable. Set File, SQL or MySQL)
+  type: file
+  # MySQL server address/ip
+  hostname: localhost
+  # MySQL server's port (MySQL/SQL=3306)
+  port: 3306
+  # MySQL user
+  username: root
+  # MySQL user's password
+  password: password
+  # Database in MySQL/SQL to save Marriage's data.
+  database: PuerkasMarriage
+Languages:
+- Spanish
+- English
+
+Genders:
+  male:
+    name: 'Male'
+    simbol: ''

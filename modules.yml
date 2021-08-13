@@ -1,0 +1,21 @@
+Messages:
+  module_disabled: '&cThis module is disabled here.'
+ModuleList:
+  commands:
+    gift: 
+      enable: true
+    pvp:
+      enable: true
+    home:
+      enable: true
+    sethome:
+      enable: true
+    chat:
+      enable: true
+    tp: 
+      enable: true
+    heal:
+      enable: true
+    seen:
+      enable: true
+    

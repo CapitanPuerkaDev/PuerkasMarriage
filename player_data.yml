@@ -1,0 +1,21 @@
+player_name: name
+Marriage:
+  ismale: 1
+  issingle: 1
+  marrychat: 2
+  enabled_pvp: 2
+  marriedwith: Unknown
+  partner_last_login: 'Unknown'
+Family:
+  family_chat: 2
+  familyname: 'Unknown'
+  adoptions:
+  - none
+
+#Male: 1 male, 2 female
+#Single: 1 = true, 2 = false
+#MarryChat: 1 = true, 2 = false
+#PvP: 1 = true, 2 = false
+
+#Has Family: 1 = true, 2 = false
+#Family Chat: 1 true, 2 false
